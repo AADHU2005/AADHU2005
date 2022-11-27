@@ -12,7 +12,7 @@
      geo : "<a href="https://www.google.com/maps/place/20.593684+78.96288">20.593684, 78.96288</a>",
      birth_year : 2005,
      github_profile : "<a href="#">AADHU2005</a>",
-     instagram_id : "<a href="https://www.instagram.com/_aadhu_07/">_aadhu_07</a>",
+     instagram_id : "<a href="https://www.instagram.com/not_aadhu/">not_aadhu</a>",
      discord_username : "<a href="https://discord.com/users/815480311285547079">Aadhu</a>",
    }
   </code>
