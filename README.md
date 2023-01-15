@@ -32,3 +32,9 @@ Contact me on <img src='https://cdn.icon-icons.com/icons2/2108/PNG/512/discord_i
 <a style="text-decoration: none;" href="https://github.com/AADHU2005">
   <img width=450 height=170 align="center" src="https://github-readme-stats.vercel.app/api?username=AADHU2005&theme=midnight-purple&show_icons=true&bg_color=0D1117&hide_border=true" />
 </a>
+
+
+<p align="center"> 
+  <br>Visitors count<br>
+  <img src="https://profile-counter.glitch.me/AADHU2005/count.svg" />
+</p>
