@@ -25,7 +25,7 @@ Contact me on <img src='https://cdn.icon-icons.com/icons2/2108/PNG/512/discord_i
 
 ## :wrench: Interests
 
-![HTML5](https://img.icons8.com/color/30/html-5.png) ![CSS](https://img.icons8.com/color/30/css3.png) ![JavaScript](https://img.icons8.com/color/30/javascript.png) ![NodeJS](https://img.icons8.com/color/30/nodejs.png) ![Github](https://img.icons8.com/material-outlined/30/github.png) ![Git](https://img.icons8.com/color/30/git.png) ![VSCode](https://img.icons8.com/color/30/visual-studio-code-2019.png)
+![HTML5](https://img.icons8.com/color/30/html-5.png) ![CSS](https://img.icons8.com/color/30/css3.png) ![JavaScript](https://img.icons8.com/color/30/javascript.png) ![Typescript](https://img.icons8.com/color/30/typescript.png) ![NodeJS](https://img.icons8.com/color/30/nodejs.png) ![Deno](https://img.icons8.com/color/30/deno.png) ![Git](https://img.icons8.com/color/30/git.png) 
 
 # My Activities
 
