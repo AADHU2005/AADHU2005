@@ -29,15 +29,9 @@ Contact me on <img src='https://cdn.icon-icons.com/icons2/2108/PNG/512/discord_i
   <a style="text-decoration: none;" href="https://github.com/AADHU2005">
     <img width=450 align="center" src="https://github-readme-stats.vercel.app/api?username=AADHU2005&theme=midnight-purple&show_icons=true&bg_color=1a1c1f&hide_border=true" />
   </a>
-  &nbsp;
-  <a style="text-decoration: none;" href="https://discord.com/users/815480311285547079">
+  <a style="text-decoration: none; padding-top: 10px" href="https://discord.com/users/815480311285547079">
     <img width=400 align="center" src="https://lanyard.cnrad.dev/api/815480311285547079" />
   </a>
 
 </p>
 
-
-<p align="center"> 
-  <br>Visitors count<br>
-  <img src="https://profile-counter.glitch.me/AADHU2005/count.svg" />
-</p>
