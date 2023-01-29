@@ -1,5 +1,4 @@
 const chk = document.getElementById('chk');
-(adsbygoogle = window.adsbygoogle || []).push({});
 
 chk.addEventListener('change', (e) => {
 	document.body.classList.toggle('dark');
