@@ -2,7 +2,7 @@ particlesJS('particles-js',
     {
       "particles": {
         "number": {
-          "value": 100,
+          "value": window.innerWidth < 768 ? 30 : 80,
           "density": {
             "enable": true,
             "value_area": 800
@@ -128,4 +128,13 @@ window.addEventListener('load', () => {
             percentage.textContent = Math.round(width) + '%';
         }
     }, 100);
+});
+
+// Add resize handler to update particle count
+window.addEventListener('resize', () => {
+  const particleCount = window.innerWidth < 768 ? 30 : 80;
+  if (window.pJSDom && window.pJSDom[0]) {
+    window.pJSDom[0].pJS.particles.number.value = particleCount;
+    window.pJSDom[0].pJS.fn.particlesRefresh();
+  }
 });
