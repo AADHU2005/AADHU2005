@@ -2,10 +2,10 @@ particlesJS('particles-js',
     {
       "particles": {
         "number": {
-          "value": window.innerWidth < 768 ? 30 : 80,
+          "value": window.innerWidth < 768 ? 15 : 80, 
           "density": {
             "enable": true,
-            "value_area": 800
+            "value_area": 1000
           }
         },
         "color": {
@@ -19,11 +19,11 @@ particlesJS('particles-js',
           "random": true
         },
         "size": {
-          "value": 3,
+          "value": 2,
           "random": true
         },
         "line_linked": {
-          "enable": true,
+          "enable": window.innerWidth >= 768,
           "distance": 150,
           "color": "#ffffff",
           "opacity": 0.4,
@@ -31,7 +31,7 @@ particlesJS('particles-js',
         },
         "move": {
           "enable": true,
-          "speed": 6,
+          "speed": 3,
           "direction": "none",
           "random": false,
           "straight": false,
@@ -43,7 +43,7 @@ particlesJS('particles-js',
         "detect_on": "canvas",
         "events": {
           "onhover": {
-            "enable": true,
+            "enable": window.innerWidth >= 768,
             "mode": "repulse"
           },
           "onclick": {
@@ -53,7 +53,7 @@ particlesJS('particles-js',
           "resize": true
         }
       },
-      "retina_detect": true
+      "retina_detect": false
     }
   );
 
@@ -69,7 +69,6 @@ document.getElementById('theme-toggle').addEventListener('change', function() {
         pJSDom[0].pJS.particles.line_linked.color_rgb_line = {r: 51, g: 51, b: 51};
     } else {
         html.setAttribute('data-theme', 'dark');
-        // Update particles color for dark theme
         pJSDom[0].pJS.particles.array.forEach(particle => {
             particle.color.value = "#ffffff";
             particle.color.rgb = {r: 255, g: 255, b: 255};
@@ -130,9 +129,8 @@ window.addEventListener('load', () => {
     }, 100);
 });
 
-// Add resize handler to update particle count
 window.addEventListener('resize', () => {
-  const particleCount = window.innerWidth < 768 ? 30 : 80;
+  const particleCount = window.innerWidth < 768 ? 15 : 80;
   if (window.pJSDom && window.pJSDom[0]) {
     window.pJSDom[0].pJS.particles.number.value = particleCount;
     window.pJSDom[0].pJS.fn.particlesRefresh();
