@@ -2,9 +2,7 @@ import { serve } from "https://deno.land/std@0.207.0/http/server.ts";
 import { serveFile } from "https://deno.land/std@0.207.0/http/file_server.ts";
 import { dirname, fromFileUrl } from "https://deno.land/std@0.207.0/path/mod.ts";
 
-
-import npm from "https://deno.land/x/npm/mod.ts";
-const particlesPackage = await npm("particles.js");
+import particlesPackage from "https://esm.sh/particles.js";
 
 const port = 8000;
 const __dirname = dirname(fromFileUrl(import.meta.url));
