@@ -1,18 +1,35 @@
-import { Application } from "https://deno.land/x/oak@v10.6.0/mod.ts";
+import { serve } from "https://deno.land/std@0.207.0/http/server.ts";
+import { serveFile } from "https://deno.land/std@0.207.0/http/file_server.ts";
+import { dirname, fromFileUrl } from "https://deno.land/std@0.207.0/path/mod.ts";
 
-const app = new Application();
 
-// deno-lint-ignore no-explicit-any
-app.use(async (context: any, next: any) => {
-  try {
-    await context.send({
-      root: `${Deno.cwd()}/`,
-      index: "index.html",
-    });
-  } catch {
-    await next();
+import npm from "https://deno.land/x/npm/mod.ts";
+const particlesPackage = await npm("particles.js");
+
+const port = 8000;
+const __dirname = dirname(fromFileUrl(import.meta.url));
+
+async function handleRequest(request: Request): Promise<Response> {
+  const url = new URL(request.url);
+  let filepath = url.pathname;
+
+  if (filepath === "/" || filepath === "") {
+    filepath = "/src/index.html";
   }
-});
 
-await app.listen({ port: 8000 });
-console.log("Server started on http://localhost:8000");
+  try {
+    const response = await serveFile(request, `${__dirname}${filepath}`);
+    
+    if (filepath.endsWith('.css')) {
+      response.headers.set('Content-Type', 'text/css');
+    } else if (filepath.endsWith('.js')) {
+      response.headers.set('Content-Type', 'application/javascript');
+    }
+    return response;
+  } catch {
+    return new Response("404 Not Found", { status: 404 });
+  }
+}
+
+console.log(`Server running on http://localhost:${port}`);
+await serve(handleRequest, { port });
