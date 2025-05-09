@@ -11,6 +11,13 @@ async function handleRequest(request: Request): Promise<Response> {
   const url = new URL(request.url);
   let filepath = url.pathname;
 
+  // Handle Discord verification file
+  if (filepath === "/.well-known/discord/verification.txt") {
+    return new Response("dh=dh=d46f37c76cb3d45bd192efae50dcf3e7c29040ec", {
+      headers: { "Content-Type": "text/plain" },
+    });
+  }
+
   if (filepath === "/" || filepath === "") {
     filepath = "/src/index.html";
   }
