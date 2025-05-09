@@ -12,8 +12,8 @@ async function handleRequest(request: Request): Promise<Response> {
   let filepath = url.pathname;
 
   // Handle Discord verification file
-  if (filepath === "/.well-known/discord/verification.txt") {
-    return new Response("dh=dh=d46f37c76cb3d45bd192efae50dcf3e7c29040ec", {
+  if (filepath === "/.well-known/discord") {
+    return new Response("dh=d46f37c76cb3d45bd192efae50dcf3e7c29040ec", {
       headers: { "Content-Type": "text/plain" },
     });
   }
