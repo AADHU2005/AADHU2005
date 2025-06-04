@@ -11,6 +11,12 @@ async function handleRequest(request: Request): Promise<Response> {
   const url = new URL(request.url);
   let filepath = url.pathname;
 
+  if (filepath === "/.well-known/discord") {
+    return new Response("dh=d46f37c76cb3d45bd192efae50dcf3e7c29040ec", {
+      headers: { "Content-Type": "text/plain" },
+    });Add commentMore actions
+  }
+  
   if (filepath === "/" || filepath === "") {
     filepath = "/src/index.html";
   }
