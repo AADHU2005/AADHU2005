@@ -14,7 +14,7 @@ async function handleRequest(request: Request): Promise<Response> {
   if (filepath === "/.well-known/discord") {
     return new Response("dh=d46f37c76cb3d45bd192efae50dcf3e7c29040ec", {
       headers: { "Content-Type": "text/plain" },
-    });Add commentMore actions
+    });
   }
   
   if (filepath === "/" || filepath === "") {
